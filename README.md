@@ -23,3 +23,4 @@ FRAMEWORK:
       2. run <net>.readInputs(instance) (forward prop)
       3. run <net>.Optimize() (back prop and grad descent)
       4. extrapolate from NLLScore usage in sample to print neg log likelihood score
+4. Adjust the step as you see fit
