@@ -82,8 +82,9 @@ class net:
     class neuronLayer:
         def __init__(self, wRows, wColumns, batchSize):
             self.input = np.array([])
-            self.weights = np.ones((wRows, wColumns))
-            self.biases = np.zeros((batchSize, wColumns))
+            np.random.seed()
+            self.weights = np.random.random((wRows, wColumns))
+            self.biases = np.random.random((batchSize, wColumns))
 
         def z(self):
             return np.dot(self.input.astype('float64'), self.weights) + self.biases
